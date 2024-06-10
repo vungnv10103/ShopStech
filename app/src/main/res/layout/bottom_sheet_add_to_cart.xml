@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_nav"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:textColor="@color/left_msg"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lnl_pro_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="80dp"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|bottom"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/mauve"
+                app:srcCompat="@drawable/cross" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text=""
+                android:textColor="@color/red_less"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text=""
+                android:textColor="@color/red_less"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_kho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text=""
+                android:textColor="@color/blur_gray"
+                android:textSize="15dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/lnl_pro_option"
+        android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/lnl_quantity"
+                android:layout_below="@+id/view_line"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.7"
+                    android:text="Số lượng"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/img_decrease"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="25dp"
+                        android:background="@drawable/bg_corner_img_button_increase"
+                        android:minHeight="30dp"
+                        android:src="@drawable/icon_decrease_gray"
+                        tools:ignore="ContentDescription,DuplicateSpeakableTextCheck,ImageContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                    <EditText
+                        android:id="@+id/ed_quantity_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:padding="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/img_increase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_corner_img_button_increase"
+                        android:minHeight="30dp"
+                        android:src="@drawable/icon_increase_teal"
+                        tools:ignore="ContentDescription,ImageContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                </LinearLayout>
+            </LinearLayout>
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:backgroundTint="#FF9800"
+        android:paddingVertical="15dp"
+        android:text="Mua ngay"
+        android:layout_below="@+id/lnl_quantity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:textColor="@color/mauve"
+        android:textSize="16sp"
+        app:cornerRadius="30dp" />
+</RelativeLayout>

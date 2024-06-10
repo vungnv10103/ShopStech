@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/img_doctor"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:src="@drawable/ic_user" />
+
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:layout_marginLeft="7dp"
+                   android:id="@+id/nameUser"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="Em Túng"
+                   android:layout_toRightOf="@+id/img_doctor"
+                   android:textSize="13sp"
+                   android:textStyle="bold"/>
+               <RatingBar
+                   android:layout_marginLeft="7dp"
+                   android:layout_toRightOf="@+id/img_doctor"
+                   android:layout_below="@+id/nameUser"
+                   android:id="@+id/ratingBar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:rating="4"
+                   style="@style/Widget.AppCompat.RatingBar.Small"
+                   android:numStars="5"
+                   android:transformPivotX="0dp"
+                   android:transformPivotY="0dp" />
+           <TextView
+               android:id="@+id/date"
+               android:layout_alignParentEnd="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint=""
+               android:textSize="15sp"
+               android:layout_gravity="center_vertical"
+               android:textStyle="bold"/>
+
+       <TextView
+           android:id="@+id/cmt"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/img_doctor"
+           android:layout_alignParentStart="true"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="9dp"
+           android:layout_marginBottom="15dp"
+           android:background="@drawable/bg_tv"
+           android:padding="10dp"
+           android:text="Đánh giá rất tốt. Ứng dụng hoạt động mượt mà và hữu ích. Tôi rất hài lòng với nó. Qúa là tuyệt vời, khi mình gặp nhau"
+           android:textColor="@color/black"
+           android:textSize="16sp"
+           android:textStyle="bold" />
+   </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_NOTIFICATION_POLICY" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShopSale"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.dashboard.chat.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.dashboard.chat.ConversationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.EBankingPayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.address.CityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VoucherActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".service.NotificationMessageService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.VideoDetailActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.dashboard.address.CitySelectionActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".activities.ChatScreenAdminActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.ChatScreenAdminActivity" />
+        <activity
+            android:name=".ui.login.VerifyOTPSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ShowDetailOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.VerifyOTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pay.ChooseBankActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pay.OTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pay.InformationBankActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.OrderActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.dashboard.order.MyOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.ForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DetailProductActivity"
+            android:exported="false"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ui.dashboard.InformationUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.address.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.address.AddressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.dashboard.store.StoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.setting.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.store.user.ListUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.chat.ChatActivityFirebase"
+            android:exported="false"
+            android:parentActivityName=".ui.dashboard.chat.ChatActivityFirebase" />
+        <activity
+            android:name=".ui.dashboard.setting.ChangePassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.chat.ListUsersChatActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

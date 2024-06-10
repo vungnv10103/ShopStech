@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mauve"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iphone_14_128gb" />
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_titleProductOfOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_priceProductOfOrder"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_colorProductOfOrder"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_numProductOfOrder"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/tv_ramRamProductOfOrder"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_ramRomProductOfOrder"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_danhgia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/red_less"
+                android:paddingHorizontal="35dp"
+                android:paddingVertical="15dp"
+                android:text="@string/danh_gia"
+                android:textAllCaps="false"
+                android:textColor="@color/mauve"
+                android:visibility="gone"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

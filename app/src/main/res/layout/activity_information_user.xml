@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mauve"
+    tools:context=".ui.dashboard.InformationUserActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_info_user"
+        app:title="@string/user"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <FrameLayout
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pencil_24" />
+            <ImageView
+                android:id="@+id/cancel_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/baseline_cancel_24" />
+        </FrameLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/mauve">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_user" />
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="170dp"
+            android:src="@drawable/ic_photo_camera"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lnl_layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20sp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/blur_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Nguyễn Văn A"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/bg_input_text"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#101010"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/blur_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="anv123@gmail.com"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/bg_input_text"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#101010"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/blur_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="0987654321"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/bg_input_text"
+                    android:backgroundTint="@color/white"
+                    android:textColor="#101010"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnl_layout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginHorizontal="25sp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ tên"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_coneradios"
+                android:hint="@string/full_name"
+                android:padding="20dp"
+                android:layout_marginBottom="25dp"
+                android:textColorHint="#BBAFAF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Địa chỉ email"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_coneradios"
+                android:hint="@string/email"
+                android:padding="20dp"
+                android:layout_marginBottom="25dp"
+                android:textColorHint="#BBAFAF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/ed_phone"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_coneradios"
+                android:hint="@string/phone_number"
+                android:padding="20dp"
+                android:textColorHint="#BBAFAF" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="@color/right_msg"
+                android:text="@string/save"
+                app:cornerRadius="30dp"
+                android:padding="14dp"
+                android:textAllCaps="false"
+                android:textColor="@color/mauve"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
